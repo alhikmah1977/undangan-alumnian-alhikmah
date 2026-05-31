@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Inisialisasi AOS
+    // Inisialisasi AOS (Animasi)
     AOS.init({
-        duration: 800, 
+        duration: 1000, 
         once: true,
-        offset: 0 
+        offset: 50 
     });
 
     // ==========================================
-    // 0. LOGIKA NAMA TAMU OTOMATIS (DARI LINK WA)
+    // 0. LOGIKA NAMA TAMU OTOMATIS
     // ==========================================
     const urlParams = new URLSearchParams(window.location.search);
     const namaTamu = urlParams.get('to');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 1. LOGIKA BUKA UNDANGAN
+    // 1. LOGIKA BUKA UNDANGAN & REFRESH ANIMASI
     // ==========================================
     const btnOpen = document.getElementById('btn-open');
     const envelope = document.getElementById('opening-wrapper');
@@ -30,13 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgVideo = document.getElementById('bg-video');
 
     btnOpen.addEventListener('click', () => {
+        // Hilangkan amplop
         envelope.classList.add('open');
+        
+        // Tampilkan konten utama
         mainContent.style.display = 'block';
 
+        // PENTING: Bangunin ulang animasi setelah amplop dibuka (jeda 300ms biar aman)
         setTimeout(() => {
             AOS.refresh();
-        }, 100);
+        }, 300);
 
+        // Putar musik & video
         try {
             bgMusic.play();
             if (bgVideo) bgVideo.play();
@@ -44,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Autoplay dicegah browser:", error);
         }
 
+        // Hapus amplop dari background setelah 1 detik
         setTimeout(() => {
             envelope.style.display = 'none';
         }, 1000);
