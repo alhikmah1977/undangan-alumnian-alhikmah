@@ -239,3 +239,24 @@ h1, h2, h3, h4 {
     padding: 8px 15px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-size: 0.9rem; transition: 0.3s;
 }
 .btn-copy-rek:hover { background: var(--color-accent); color: var(--color-bg-dark); }
+/* =========================================
+   12. RESPONSIVE MOBILE (PERBAIKAN HP)
+   ========================================= */
+@media screen and (max-width: 600px) {
+    /* Perkecil teks no rekening biar nggak nabrak */
+    .rekening-box h3 {
+        font-size: 1.3rem !important; 
+        letter-spacing: 1px;
+    }
+    
+    /* Rapikan padding kotak rekening */
+    .rekening-box {
+        padding: 15px 10px;
+        min-width: 95%;
+    }
+    
+    /* Judul PONPES disesuaikan ukurannya */
+    .title-ponpes {
+        font-size: 1.5rem !important; 
+    }
+}
