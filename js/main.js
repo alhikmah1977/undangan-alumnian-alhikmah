@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Inisialisasi AOS (Animasi)
+    // 1. KUNCI SCROLL: Biar tamu nggak bisa scroll sebelum amplop dibuka
+    document.body.style.overflow = 'hidden';
+
+    // 2. INIT ANIMASI: Biarin dia ngebaca posisi karena web udah nggak disembunyiin
     AOS.init({
         duration: 1000, 
         once: true,
@@ -8,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 0. LOGIKA NAMA TAMU OTOMATIS
+    // 3. LOGIKA NAMA TAMU OTOMATIS
     // ==========================================
     const urlParams = new URLSearchParams(window.location.search);
     const namaTamu = urlParams.get('to');
@@ -21,25 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 1. LOGIKA BUKA UNDANGAN & REFRESH ANIMASI
+    // 4. LOGIKA BUKA UNDANGAN
     // ==========================================
     const btnOpen = document.getElementById('btn-open');
     const envelope = document.getElementById('opening-wrapper');
-    const mainContent = document.getElementById('main-content');
     const bgMusic = document.getElementById('bg-music');
     const bgVideo = document.getElementById('bg-video');
 
     btnOpen.addEventListener('click', () => {
-        // Hilangkan amplop
+        // Hilangkan amplop (geser ke atas)
         envelope.classList.add('open');
         
-        // Tampilkan konten utama
-        mainContent.style.display = 'block';
+        // BUKA KUNCI SCROLL: Sekarang tamu bisa scroll ke bawah
+        document.body.style.overflow = 'auto';
 
-        // PENTING: Bangunin ulang animasi setelah amplop dibuka (jeda 300ms biar aman)
+        // Refresh AOS dikit biar makin presisi
         setTimeout(() => {
             AOS.refresh();
-        }, 300);
+        }, 500);
 
         // Putar musik & video
         try {
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 2. LOGIKA COUNTDOWN TIMER
+    // 5. LOGIKA COUNTDOWN TIMER
     // ==========================================
     const targetDate = new Date("June 27, 2026 08:00:00").getTime();
 
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 
     // ==========================================
-    // 3. COPY NOMOR REKENING
+    // 6. COPY NOMOR REKENING
     // ==========================================
     const btnCopy = document.getElementById('btn-copy');
     const norek = document.getElementById('norek').innerText;
