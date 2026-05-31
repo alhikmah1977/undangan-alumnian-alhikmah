@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Alumnian | HAPPAS - PONDOK PESANTREN AL HIKMAH</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="opening-wrapper" class="envelope-container">
+        <div class="envelope-content">
+            
+            <div class="logo-wrapper" style="margin-bottom: 20px;">
+                <img src="assets/img/logo-happas.png" alt="Logo HAPPAS" class="hero-logo logo-side" onerror="this.style.display='none'">
+                <img src="assets/img/logo-alumnian16.png" alt="Logo Alumnian" class="hero-logo logo-center" onerror="this.style.display='none'">
+                <img src="assets/img/logo-ponpes.png" alt="Logo Ponpes" class="hero-logo logo-side" onerror="this.style.display='none'">
+            </div>
+
+            <p class="translation-text" style="font-size: 1rem; font-style: normal; line-height: 1.5; margin: 15px 0; color: var(--color-accent-light);">
+                "Menghidupkan kenangan mengingat masalalu dan menguatkan sinergi alumni ponpes Al-Hikmah"
+            </p>
+            
+            <div class="spacer"></div>
+            <h1 class="text-script title-alumnian">Alumnian</h1>
+            <h2 class="title-ponpes">PONDOK PESANTREN<br>AL HIKMAH</h2>
+            <p class="subtitle-ponpes">NARAWITA SODONGHILIR</p>
+            <div class="spacer"></div>
+            <div class="guest-info">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <h3 id="guest-name">Nama Tamu Undangan</h3> 
+            </div>
+            <button id="btn-open" class="btn-gold">
+                <i class="fas fa-envelope-open-text"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <main id="main-content" style="display: none; position: relative;">
+        
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="assets/video/bg-animasi.mp4" type="video/mp4">
+        </video>
+
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" style="z-index: 2;" data-aos="zoom-in" data-aos-duration="1000">
+                
+                <p class="arabic-text" style="font-size: 2.5rem; margin-bottom: 20px;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+                
+                <p class="hero-intro">
+                    Assalamu’alaikum Warahmatullahi Wabarakatuh.<br>
+                    Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara:
+                </p>
+                
+                <h1 class="text-script title-alumnian" style="margin-top: 30px;">Alumnian</h1>
+                <h2 class="title-ponpes">PONDOK PESANTREN AL HIKMAH</h2>
+                <p class="subtitle-ponpes">NARAWITA SODONGHILIR</p>
+                
+                <div class="hero-date" style="margin-top: 40px;" data-aos="fade-up">
+                    <div class="date-box">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>27 - 28 JUNI 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="acara" class="acara-section" style="position: relative; z-index: 2;">
+            <div class="container" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title text-script" data-aos="fade-up" style="font-size: 3.5rem; margin-bottom: 30px; color: var(--color-accent);">Menuju Acara</h2>
+                
+                <div class="countdown-wrapper" data-aos="fade-up">
+                    <div class="cd-box"><span id="hari">00</span><p>Hari</p></div>
+                    <div class="cd-box"><span id="jam">00</span><p>Jam</p></div>
+                    <div class="cd-box"><span id="menit">00</span><p>Menit</p></div>
+                    <div class="cd-box"><span id="detik">00</span><p>Detik</p></div>
+                </div>
+
+                <div class="event-card" data-aos="flip-left">
+                    <i class="fas fa-mosque event-icon"></i>
+                    <h3>Reuni & Silaturahmi Akbar</h3>
+                    <p class="event-date">Sabtu - Minggu, 27-28 Juni 2026</p>
+                    <div class="event-location">
+                        <h4>Bertempat di:</h4>
+                        <p><strong>PONDOK PESANTREN AL HIKMAH</strong><br>Narawita, Sodonghilir, Tasikmalaya</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=-7.4906252,108.0533763" target="_blank" class="btn-gold mt-4">
+                        <i class="fas fa-map-marked-alt"></i> Buka Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="rundown" class="rundown-section" style="position: relative; z-index: 2;">
+            <div class="container" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title text-script" data-aos="fade-up" style="font-size: 3.5rem; margin-bottom: 40px; color: var(--color-accent);">Susunan Acara</h2>
+                
+                <div class="rundown-day" data-aos="fade-up">
+                    <h3><i class="far fa-calendar-check"></i> Sabtu, 27 Juni 2026</h3>
+                    <ul class="rundown-list">
+                        <li><span class="time">19.00 - 19.30 WIB</span> <span class="event">Persiapan Panitia</span></li>
+                        <li><span class="time">19.30 - 21.00 WIB</span> <span class="event">Ngobral (Ngobrol Bareng Alumni)</span></li>
+                        <li><span class="time">21.00 - Selesai</span> <span class="event">Kreasi Seni Drama Alumni</span></li>
+                    </ul>
+                </div>
+
+                <div class="rundown-day" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="far fa-calendar-check"></i> Minggu, 28 Juni 2026</h3>
+                    <ul class="rundown-list">
+                        <li><span class="time">07.30 - 08.00 WIB</span> <span class="event">Registrasi Peserta Alumni</span></li>
+                        <li><span class="time">08.00 - 08.10 WIB</span> <span class="event">Pembukaan MC</span></li>
+                        <li><span class="time">08.10 - 08.25 WIB</span> <span class="event">Pembacaan Ayat Suci Al-Qur'an</span></li>
+                        <li><span class="time">08.25 - 08.35 WIB</span> <span class="event">Sambutan Ketua Umum Alumni</span></li>
+                        <li><span class="time">08.35 - 08.50 WIB</span> <span class="event">Sambutan Pimpinan PONPES Al-Hikmah</span></li>
+                        <li><span class="time">08.50 - 09.00 WIB</span> <span class="event">Penampilan Kreasi Seni Santri</span></li>
+                        <li><span class="time">09.00 - 09.10 WIB</span> <span class="event">Penampilan Kreasi Alumni</span></li>
+                        <li><span class="time">09.10 - 10.40 WIB</span> <span class="event">Musyawarah Besar Alumni</span></li>
+                        <li><span class="time">10.40 - 11.10 WIB</span> <span class="event">Ramah Tamah dan Dokumentasi</span></li>
+                        <li><span class="time">11.10 - 11.20 WIB</span> <span class="event">Do'a Bersama</span></li>
+                        <li><span class="time">11.20 - 11.30 WIB</span> <span class="event">Foto Bersama</span></li>
+                        <li><span class="time">11.30 - 12.30 WIB</span> <span class="event">Sholat & Makan Bersama Alumni</span></li>
+                        <li><span class="time">12.30 - Selesai</span> <span class="event">Tausyiah (Tabligh Akbar)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="donasi-rsvp" class="donasi-section" style="position: relative; z-index: 2;">
+            <div class="container" style="width: 100%; max-width: 700px; margin: 0 auto;">
+                
+                <div class="donasi-card" data-aos="zoom-in">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 15px;"></i>
+                    <h2 class="section-title text-script" style="font-size: 3.5rem; margin-bottom: 10px; color: var(--color-accent);">Dompet Silaturahmi</h2>
+                    <p style="margin-bottom: 20px; color: #ccc;">Bagi alumni yang ingin berpartisipasi dalam bentuk sodaqoh/donasi kegiatan, dapat disalurkan melalui rekening di bawah ini:</p>
+                    
+                    <div class="rekening-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" alt="BRI" style="width: 100px; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                        <h3 id="norek">016101044824501</h3>
+                        <p>a.n. <strong>VEFI RISKAWATI</strong></p>
+                        <button id="btn-copy" class="btn-copy-rek"><i class="far fa-copy"></i> Salin No. Rekening</button>
+                    </div>
+                </div>
+
+                <div class="rsvp-card" data-aos="zoom-in" data-aos-delay="200" style="margin-top: 40px; text-align: center; background: rgba(12, 42, 28, 0.9); padding: 40px 20px; border-radius: 15px; border: 1px solid var(--color-accent);">
+                    <h3 style="margin-bottom: 10px; color: var(--color-accent); font-size: 1.8rem;">Konfirmasi Kehadiran</h3>
+                    <p style="margin-bottom: 25px; color: #ccc;">Untuk informasi lebih lanjut dan konfirmasi kehadiran, silakan hubungi Ketua Pelaksana (Ryan Rediana Arifin):</p>
+                    <a href="https://wa.me/6282117617269?text=Assalamu'alaikum,%20saya%20alumni%20insyaAllah%20akan%20hadir%20di%20acara%20Reuni%20Alumnian." target="_blank" class="btn-gold">
+                        <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Hubungi via WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer-section" style="position: relative; z-index: 2;">
+            <div class="container footer-container" data-aos="zoom-in">
+                <p class="arabic-text" style="font-size: 2.2rem; margin-bottom: 20px;">وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ</p>
+                <p class="footer-note">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk mempererat tali silaturahmi.</p>
+                
+                <div class="signature-box">
+                    <p>Hormat Kami,</p>
+                    <h2 class="signature-title">Keluarga Besar</h2>
+                    <h2 class="signature-ponpes">PONDOK PESANTREN AL HIKMAH</h2>
+                </div>
+
+                <div class="spacer" style="height: 60px;"></div>
+                <p class="copyright">© 2026 HAPPAS (Himpunan Alumni Pondok Pesantren Al-Hikmah Sodonghilir).</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <audio id="bg-music" loop>
+        <source src="assets/audio/sholawat.m4a" type="audio/mp4">
+    </audio>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
