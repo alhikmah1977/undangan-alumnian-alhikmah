@@ -55,6 +55,7 @@
     <!-- ==========================================
          2. KONTEN UTAMA UNDANGAN
          ========================================== -->
+    <!-- REVISI: display: none dihapus biar animasi kebaca tingginya -->
     <main id="main-content" style="position: relative;">
         
         <video autoplay loop muted playsinline id="bg-video">
@@ -198,8 +199,9 @@
 
     </main>
 
-    <audio id="bg-music" loop>
-        <source src="assets/audio/sholawat.m4a" type="audio/mp4">
+    <!-- REVISI: atribut 'loop' dihapus dan ditambah parameter '?v=2' untuk cache busting -->
+    <audio id="bg-music">
+        <source src="assets/audio/sholawat.m4a?v=2" type="audio/mp4">
     </audio>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
